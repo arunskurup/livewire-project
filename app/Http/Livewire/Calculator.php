@@ -19,16 +19,24 @@ class Calculator extends Component
     public function calculate(){
         $num1=(float)$this->number1;
         $num2=(float)$this->number12;
-        if ($this->action = '-'){
+        if ($this->action == '-'){
             $this->result = $num1 - $num2;
-        }elseif($this->action = '+'){
+        }elseif($this->action == '+'){
             $this->result = $num1 + $num2;
-        }elseif($this->action = '*'){
+        }elseif($this->action == '*'){
             $this->result = $num1 * $num2;
-        }elseif($this->action = '/'){
+        }elseif($this->action == '/'){
             $this->result = $num1/$num2;
-        }elseif($this->action = '%'){
-            $this->result = $num1 / 100 * $num2;
+        }elseif($this->action == '%'){
+            $this->result = $num1 / 100 * $num2; 
         }
+    }
+    public function update($property){
+        if ($this->number1 == '' || $this->number2 == '') {
+            $this->desable=true;
+        } else {
+            $this->desable=false;
+        }
+        
     }
 }
