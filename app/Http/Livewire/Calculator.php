@@ -18,7 +18,7 @@ class Calculator extends Component
 
     public function calculate(){
         $num1=(float)$this->number1;
-        $num2=(float)$this->number12;
+        $num2=(float)$this->number2;
         if ($this->action == '-'){
             $this->result = $num1 - $num2;
         }elseif($this->action == '+'){
