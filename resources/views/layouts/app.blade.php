@@ -7,7 +7,7 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link hreff="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -22,6 +22,14 @@
         </style>
     </head>
     <body class="antialiased">
+        <nav class="flex bg-slate-700 text-white">
+         <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
+         <a href="/calculater" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('calculater')) ? 'bg-slate-800':''}}">Calculater</a>
+         <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
+         <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
+         <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
+         <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
+        </nav>
         {{$slot}}
         @livewireScripts
         </div>

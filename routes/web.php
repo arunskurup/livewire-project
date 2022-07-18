@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/counter', function () {
     return view('welcome');
 });
 Route::get('/calculater',\App\Http\Livewire\Calculator::class);
