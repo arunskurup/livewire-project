@@ -25,7 +25,7 @@
         <nav class="flex bg-slate-700 text-white">
          <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
          <a href="/calculater" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('calculater')) ? 'bg-slate-800':''}}">Calculater</a>
-         <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
+         <a href="/Todo_List" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('Todo_List')) ? 'bg-slate-800':''}}">Counter</a>
          <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
          <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
          <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
