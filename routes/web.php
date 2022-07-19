@@ -16,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/counter', function () {
     return view('welcome');
 });
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::get('/calculater',\App\Http\Livewire\Calculator::class);
 Route::get('/Todo_List',\App\Http\Livewire\TodoList::class);
