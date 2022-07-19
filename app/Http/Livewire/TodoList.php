@@ -26,4 +26,23 @@ class TodoList extends Component
         $this->todoText='';
         $this->setTodos();
     }
+    public function toggleTodos($id){
+        $todo= todo::where('id',$id)->first();
+        if ($todo){
+            return;
+        }
+        $todo->completed=!$todo->completed;
+        $todo->save();
+        $this->setTodos();
+
+    }
+    public function deleteTodos($id){
+        $todo= todo::where('id',$id)->first();
+        if ($todo){
+            return;
+        }
+        $todo->delete();
+        $this->setTodos();
+
+    }
 }
