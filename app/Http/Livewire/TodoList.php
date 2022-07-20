@@ -9,13 +9,13 @@ class TodoList extends Component
     public $todos;
     public string $todoText ='';
     public function mount(){
-        $this->selectTodos();
+        $this->setTodos();
     }
     public function render()
     {
         return view('livewire.todo-list');
     }
-    public function selectTodos(){
+    public function setTodos(){
         $this->todos=todo::orderBy('created_at','DESC')->get();
     }
     public function addTodo(){
