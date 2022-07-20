@@ -18,7 +18,7 @@ class TodoList extends Component
     public function selectTodos(){
         $this->todos=todo::orderBy('created_at','DESC')->get();
     }
-    public function addTodos(){
+    public function addTodo(){
         $todo= new todo;
         $todo->todo=$this->todoText;
         $todo->completed= false;
