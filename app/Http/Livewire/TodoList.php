@@ -28,10 +28,11 @@ class TodoList extends Component
     }
     public function toggleTodos($id){
         $todo= todo::find($id);
+       
         if (!$todo){
             return;
         }
-        $todo->completed=!$todo->completed;
+        $todo->completed = !$todo->completed;
         $todo->save();
         $this->setTodos();
 
