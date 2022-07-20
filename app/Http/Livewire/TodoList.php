@@ -27,8 +27,8 @@ class TodoList extends Component
         $this->setTodos();
     }
     public function toggleTodos($id){
-        $todo= todo::where('id',$id)->first();
-        if ($todo){
+        $todo= todo::find($id);
+        if (!$todo){
             return;
         }
         $todo->completed=!$todo->completed;
@@ -37,11 +37,10 @@ class TodoList extends Component
 
     }
     public function deleteTodos($id){
-        $todo= todo::where('id',$id)->first();
-        if ($todo){
+        $todo= todo::find($id)->delete();
+        if (!$todo){
             return;
         }
-        $todo->delete();
         $this->setTodos();
 
     }
