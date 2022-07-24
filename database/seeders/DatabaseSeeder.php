@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\Country1;
+use App\Models\Country;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -28,9 +28,9 @@ class DatabaseSeeder extends Seeder
             [ 'name' => 'North America',],
         ];
         foreach($continents as $item){
-            \App\Models\Continent1::factory()->create($item)
+            \App\Models\Continent::factory()->create($item)
             ->each(function($c){
-                $c->countries()->saveMany(Country1::factory(10)->make());
+                $c->countries()->saveMany(Country::factory(10)->make());
             });
 
         }
