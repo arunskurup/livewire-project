@@ -26,7 +26,7 @@
          <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
          <a href="/calculater" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('calculater')) ? 'bg-slate-800':''}}">Calculater</a>
          <a href="/Todo_List" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('Todo_List')) ? 'bg-slate-800':''}}">Todo List</a>
-         <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
+         <a href="/Cascadiing_Dropdown" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('Cascadiing_Dropdown')) ? 'bg-slate-800':''}}">Cascading Dropdown</a>
          <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
          <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
         </nav>
