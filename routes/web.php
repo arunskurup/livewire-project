@@ -22,3 +22,4 @@ Route::get('/', function () {
 Route::get('/calculater',\App\Http\Livewire\Calculator::class);
 Route::get('/Todo_List',\App\Http\Livewire\TodoList::class);
 Route::get('/Cascadiing_Dropdown',\App\Http\Livewire\CascadingDropdown::class);
+Route::get('/Product_Search',\App\Http\Livewire\ProductSearch::class);
