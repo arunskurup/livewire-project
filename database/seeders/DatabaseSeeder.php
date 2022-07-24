@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-
+use App\Models\Country1;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -21,16 +21,16 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         $continents=[
-            ['id' => '1', 'name' => 'Europe',],
-            ['id' => '2', 'name' => 'Asia',],
-            ['id' => '3','name' => 'Africa',],
-            ['id' => '4', 'name' => 'South America',],
-            ['id' => '5', 'name' => 'North America',],
+            [ 'name' => 'Europe',],
+            [ 'name' => 'Asia',],
+            ['name' => 'Africa',],
+            ['name' => 'South America',],
+            [ 'name' => 'North America',],
         ];
         foreach($continents as $item){
-            \App\Models\Continent::factory()->create($item)
+            \App\Models\Continent1::factory()->create($item)
             ->each(function($c){
-                $c->countries()->saveMoney(Country::factory(10)->make());
+                $c->countries()->saveMany(Country1::factory(10)->make());
             });
 
         }
