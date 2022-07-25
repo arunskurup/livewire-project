@@ -24,3 +24,4 @@ Route::get('/Todo_List',\App\Http\Livewire\TodoList::class);
 Route::get('/Cascadiing_Dropdown',\App\Http\Livewire\CascadingDropdown::class);
 Route::get('/Product_Search',\App\Http\Livewire\ProductSearch::class);
 Route::get('/Image-Upload',\App\Http\Livewire\ImageUpload::class);
+Route::get('/Resgister_Form',\App\Http\Livewire\ResgisterForm::class);

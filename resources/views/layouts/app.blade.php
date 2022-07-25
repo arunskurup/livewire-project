@@ -29,7 +29,7 @@
          <a href="/Cascadiing_Dropdown" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('Cascadiing_Dropdown')) ? 'bg-slate-800':''}}">Cascading Dropdown</a>
          <a href="/Product_Search" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('Product_Search')) ? 'bg-slate-800':''}}">Products Search</a>
          <a href="/Image-Upload" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('Image-Upload')) ? 'bg-slate-800':''}}">Image Upload</a>
-         <a href="/Image-Upload" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('Image-Upload')) ? 'bg-slate-800':''}}">Image Upload</a>
+         <a href="/Resgister_Form" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('Resgister_Form')) ? 'bg-slate-800':''}}">Resgister Form</a>
         </nav>
         {{$slot}}
         @livewireScripts
