@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Livewire;
-
+use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use Illuminate\Support\Facades\Storage;
+
 class ImageUpload extends Component
 {   
     use WithFileUploads;
@@ -15,13 +15,17 @@ class ImageUpload extends Component
     public $image = [];
     
     public function save()
-    {
+    { 
         $this->validate([
             'image.*' => 'image|max:1024'
         ]);
+      
+       
         //store
         foreach($this->image as $image){
-            $image->store('public');
+            // Storage::url("/storage/app/{$image}");
+             $image->store('public');
+
         }
     }
 
@@ -29,9 +33,9 @@ class ImageUpload extends Component
     {
         return view('livewire.image-upload',[
             'images' => collect(Storage::files('public'))
-            ->fillter(function ($file){
-                return in_array(strtolower(pathinfo($file)),['png','jpg','jpeg','gif','webp']);
-            })
+            // ->fillter(function ($file){
+            //     return in_array(strtolower(pathinfo($file,)),['png','jpg','jpeg','gif','webp']);
+            // })
             ->map(function($file){
                return Storage::url($file);
             })

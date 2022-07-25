@@ -28,7 +28,8 @@
          <a href="/Todo_List" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('Todo_List')) ? 'bg-slate-800':''}}">Todo List</a>
          <a href="/Cascadiing_Dropdown" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('Cascadiing_Dropdown')) ? 'bg-slate-800':''}}">Cascading Dropdown</a>
          <a href="/Product_Search" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('Product_Search')) ? 'bg-slate-800':''}}">Products Search</a>
-         <a href="/counter" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('counter')) ? 'bg-slate-800':''}}">Counter</a>
+         <a href="/Image-Upload" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('Image-Upload')) ? 'bg-slate-800':''}}">Image Upload</a>
+         <a href="/Image-Upload" class="py-4 px-6 hover:bg-slate-800 {{(request()->routeIs('Image-Upload')) ? 'bg-slate-800':''}}">Image Upload</a>
         </nav>
         {{$slot}}
         @livewireScripts
