@@ -10,15 +10,16 @@ class ProductSearch extends Component
 
     use WithPagination;
 
-    public static $search = '';
+    
+    public string $Search = '';
     protected $queryString = ['Search'];
 
     public function render()
     {
         $query = Product::query();
-        if($this->search){
-            $query->where('title','like',"%{$this->search}%")
-            ->orWhere('title','like',"%{$this->search}%");
+        if($this->Search){
+            $query->where('title','like',"%{$this->Search}%")
+            ->orWhere('title','like',"%{$this->Search}%");
         }
         return view('livewire.product-search',['products' => $query->paginate(20)]);
         
